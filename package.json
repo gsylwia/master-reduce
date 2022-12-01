@@ -1,0 +1,20 @@
+{
+  "name": "master-reduce",
+  "version": "1.0.0",
+  "description": "Za pomocą metody .reduce wbudowanej w array odtwórz działanie innych metod tablicowych",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gsylwia/master-reduce.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gsylwia/master-reduce/issues"
+  },
+  "homepage": "https://github.com/gsylwia/master-reduce#readme"
+}
