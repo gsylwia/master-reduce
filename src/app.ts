@@ -4,6 +4,10 @@ const multiply = (num: number) => {
     return num * 2;
 }
 
+const even = (num: number) => {
+  return num % 2 === 0;
+}
+
 const mapFn = <ArrayType, ReturnType> (
 array: ArrayType[], 
 callback: (data: ArrayType | ReturnType) => ReturnType
@@ -15,3 +19,17 @@ callback: (data: ArrayType | ReturnType) => ReturnType
   };
 
 console.log(mapFn(arr, multiply));
+
+const filterFn = <ArrayType> (
+  array: ArrayType[], 
+  callback: (data: ArrayType) => boolean
+  ) => {
+      return array.reduce((prev: ArrayType[], curr: ArrayType ) => {
+        if (callback(curr)) {
+            prev.push(curr);
+        }
+        return prev;
+      }, []);
+    };
+  
+console.log(filterFn(arr, even));
