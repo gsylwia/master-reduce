@@ -38,9 +38,7 @@ const everyFn = <ArrayType> (
   callback: (data: ArrayType) => boolean
   ) => {
     return array.reduce((prev: boolean, curr: ArrayType) => {
-      	if (!callback(curr)) {
-          return false
-        } return prev
+        return !callback(curr) ? false : prev;
     }, true)
   };
   
@@ -52,9 +50,7 @@ const someFn = <ArrayType> (
   callback: (data: ArrayType) => boolean
   ) => {
     return array.reduce((prev: boolean, curr: ArrayType) => {
-      	if (callback(curr)) {
-          return true
-        } return prev
+        return callback(curr) ? true : prev;
     }, false)
   };
   
